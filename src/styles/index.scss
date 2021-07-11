@@ -1,0 +1,215 @@
+/*
+ * Author: 卓文理
+ * Email: zhuowenligg@gmail.com
+ * Date: 2021-07-11 15:24:00
+ */
+
+@import "./_reboot.scss";
+
+.container {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    padding: 10px 0;
+    height: auto;
+    min-height: 360px;
+    color: white;
+    background-image: linear-gradient(268deg, #ffc23f 23%, #ffc74d 48%, #ffb21f 81%);
+    background-attachment: fixed;
+    .logo {
+        display: block;
+        margin-bottom: 30px;
+        width: 90px;
+        height: 125px;
+        background: url("../assets/logo.png") 0 0 no-repeat;
+        background-size: 100%;
+    }
+    .teaser {
+        // max-width: 50%;
+        &__title {
+            margin-bottom: 30px;
+            font-size: 42px;
+        }
+        &__content {
+            margin-bottom: 50px;
+            font-size: 22px;
+            line-height: 34px;
+        }
+    }
+    .video {
+        position: relative;
+        width: 340px;
+        height: 381.72px;
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url("../assets/teaser-video-bg.png") no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        video {
+            position: absolute;
+            top: 11.13%;
+            left: 28.9%;
+            z-index: 0;
+            width: 43.78%;
+        }
+    }
+}
+
+.title {
+    margin: 0;
+    padding: 150px 0 20px;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+    color: $primary;
+}
+
+.image-text {
+    padding: 80px 0;
+    &__row {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &.is--mirrored &__row {
+        flex-direction: row;
+    }
+    &.is--mirrored &__image {
+        margin-left: 0;
+    }
+    &__image {
+        display: flex;
+        margin-left: 8.33333%;
+        max-width: 50%;
+        flex: 0 0 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__content {
+        display: flex;
+        margin-left: 8.33333%;
+        max-width: 41.66667%;
+        flex: 0 0 41.66667%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h2 {
+        margin-bottom: 40px;
+        font-size: 42px;
+        line-height: 56px;
+    }
+    p {
+        font-size: 22px;
+        line-height: 34px;
+    }
+}
+
+.footer {
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    padding: 40px 0;
+    width: 100%;
+    background: #f2f2f3;
+    &__logo {
+        display: block;
+        margin-left: -12px;
+        width: 280px;
+        height: 100px;
+        background: url("../assets/logo-banner.png") 0 0 no-repeat;
+        background-size: 100%;
+    }
+    &__row {
+        display: flex;
+        // margin-bottom: 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__legal {
+        display: flex;
+    }
+    &__link {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        font-weight: bold;
+        line-height: 28px;
+    }
+    &__link + &__link {
+        margin-left: 40px;
+    }
+}
+
+.privacy {
+    padding-bottom: 50px;
+    .container {
+        display: flex;
+    }
+    &__content {
+        padding: 0 10px;
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 28px 0;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .teaser {
+            max-width: 50%;
+        }
+        .video {
+            margin-top: -40px;
+            width: 440px;
+            height: 494px;
+        }
+    }
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (max-width: 767.98px) {
+    .header .video {
+        margin: 40px auto 0;
+    }
+    .image-text {
+        &__row {
+            flex-direction: column;
+        }
+        &.is--mirrored &__row {
+            flex-direction: column;
+        }
+        &__image {
+            margin-bottom: 40px;
+        }
+        &__image,
+        &__content {
+            max-width: 100%;
+        }
+    }
+    .privacy {
+        .container {
+            flex-direction: column;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1240px;
+    }
+}
