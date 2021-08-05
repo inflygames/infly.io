@@ -136,6 +136,12 @@
     }
     &__legal {
         display: flex;
+        flex-direction: column;
+        div {
+            display: flex;
+            margin-top: 5px;
+            justify-content: flex-end;
+        }
     }
     &__link {
         display: block;
@@ -205,6 +211,18 @@
     .privacy {
         .container {
             flex-direction: column;
+        }
+    }
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__legal {
+        margin-top: 10px;
+        div {
+            justify-content: center;
         }
     }
 }
