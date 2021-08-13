@@ -1,9 +1,9 @@
-#AdMob
+# Admob
 google.com, pub-1664219395036550, DIRECT, f08c47fec0942fa0
-google.com, pub-7053373699938714, DIRECT, f08c47fec0942fa0
 
 #Facebook
 facebook.com, 896745634209908, RESELLER, c3e20eee3f780d68
+facebook.com, 572429494130040, DIRECT, c3e20eee3f780d68
 
 #Applovin
 applovin.com, 197a491eadf055903e06e4cd4c26b419, DIRECT
