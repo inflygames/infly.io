@@ -79,6 +79,10 @@
                 $roiHtml = $tr.children[indexROI].querySelector('.cell')
             }
 
+            if (!$roiHtml) {
+                return;
+            }
+
             const countrys = name.replace(/BID_/, '').match(/(VN|ID|US|IN|GB|TH|TW|SG|PH|JP|KR|KH|MY)/);
             if (name && $roiHtml && countrys && countrys.length) {
                 const country = countrys[0];
